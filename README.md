@@ -1,16 +1,33 @@
-# React + Vite
+# Lab-2: React + Leaflet Map Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a simple interactive map built with React and Leaflet.  
+Users can add markers, enter notes, view a list, and reset the map.
 
-Currently, two official plugins are available:
+## Setup
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. Clone the repo:
+git clone https://github.com/emi343rc/Lab-2.git
+cd Lab-2
 
-## React Compiler
+2. Install dependencies:
+npm install
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Expanding the ESLint configuration
+3. Start the development server:
+npm run dev
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+4. Open `http://localhost:5173` in your browser.
+
+## How to Use
+
+- Click **Collect** and then click on the map to add locations.
+- Enter a name and optional notes.
+- Click **Done** to stop adding markers.
+- Click **Reset** to clear all markers.
+
+## Challenges Solved
+
+- Leaflet CSS loading issues (fixed via CDN and container height adjustments)
+- Infinite map panning (fixed with `maxBounds` and `maxBoundsViscosity`)
+- Marker icons with Vite (fixed using `import.meta.url`)
